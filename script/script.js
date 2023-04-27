@@ -6,4 +6,6 @@ inizializzare un contdown con la funzione
 */
 
 const now = new Date().getTime();
-console.log(now);
+
+const tomorrow = new Date('2023-04-28T09:30:00').getTime();
+console.log(tomorrow);
