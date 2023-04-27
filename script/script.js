@@ -5,25 +5,23 @@ fare la sottrazione tra i due numeri ottenuti per avere il tempo rimanente e sta
 inizializzare un contdown con la funzione
 */
 
-const now = new Date().getTime();
-
 const tomorrow = new Date('2023-04-28T09:30:00').getTime();
 
+const countDown = document.querySelector('#countdown');
 
-let timer = tomorrow - now;
-
-const seconds = Math.floor(timer / 1000);
-const minutes = Math.floor(seconds / 60);
-const hours = Math.floor(minutes / 60);
-
-timer = hours + '' + minutes + '' + seconds;
-console.log(timer);
-
-console.log(hours + " Ore " + (minutes % 60) + " Minuti " + (seconds % 60) + " Secondi");
 
 setInterval(() => {
-    timer--
-    console.log(timer);
+    const now = new Date().getTime();
+
+    let timer = tomorrow - now;
+
+    const seconds = Math.floor(timer / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+
+    countDown.innerHTML = `${hours} ore ${minutes % 60} minuti ${seconds % 60} secondi`;
+
+    console.log(hours + ' ore ' + (minutes % 60) +  ' minuti '+ (seconds % 60) + ' secondi ');
 }, 1000);
 
 
