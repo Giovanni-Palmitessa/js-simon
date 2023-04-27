@@ -15,13 +15,18 @@ const IdInterval = setInterval(() => {
 
     let timer = tomorrow - now;
 
-    const seconds = Math.floor(timer / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
+    if (timer == 0) {
+        clearInterval(IdInterval);
+    } else {
+        const seconds = Math.floor(timer / 1000);
+        const minutes = Math.floor(seconds / 60);
+        const hours = Math.floor(minutes / 60);
+    
+        countDown.innerHTML = `${hours} ore ${minutes % 60} minuti ${seconds % 60} secondi`;
+    
+        console.log(hours + ' ore ' + (minutes % 60) +  ' minuti '+ (seconds % 60) + ' secondi ');
+    }
 
-    countDown.innerHTML = `${hours} ore ${minutes % 60} minuti ${seconds % 60} secondi`;
-
-    console.log(hours + ' ore ' + (minutes % 60) +  ' minuti '+ (seconds % 60) + ' secondi ');
 }, 1000);
 
 
