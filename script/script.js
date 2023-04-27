@@ -10,7 +10,7 @@ const tomorrow = new Date('2023-04-28T09:30:00').getTime();
 const countDown = document.querySelector('#countdown');
 
 
-setInterval(() => {
+const IdInterval = setInterval(() => {
     const now = new Date().getTime();
 
     let timer = tomorrow - now;

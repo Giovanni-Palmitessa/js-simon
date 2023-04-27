@@ -1,3 +1,10 @@
+body{
+    background-image: url(img/maxresdefault.jpg);
+    background-size: cover;
+    width: 100%;
+    color: cornsilk;
+}
+
 h1{
     text-align: center;
     padding-top: 2rem;
