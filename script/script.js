@@ -5,3 +5,4 @@ fare la sottrazione tra i due numeri ottenuti per avere il tempo rimanente e sta
 inizializzare un contdown con la funzione
 */
 
+const now = Date().getTime();
